@@ -1,139 +1,152 @@
 "use client";
 
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight, Star, Youtube } from "lucide-react";
 
 export default function CTASection() {
-  const brandLogos = [
-    { name: "nagarro", logo: (
-      <span className="text-grey-500 font-bold tracking-tight text-lg md:text-xl group-hover:text-white transition-colors select-none">
-        nagarro<span className="text-primary font-normal">.</span>
-      </span>
-    )},
-    { name: "amazon", logo: (
-      <svg className="h-6 md:h-7 text-grey-500 fill-current group-hover:text-white transition-colors" viewBox="0 0 24 8" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1.2 4.3c-.6.3-1 .8-1 1.5 0 .9.8 1.4 1.8 1.4 1.2 0 2-.6 2.3-1.4V7h1.1V3.7c0-1.4-.8-2-2.3-2C1.7 1.7.7 2.3.5 3.3h1.1c.2-.5.5-.8 1.1-.8.7 0 1.1.3 1.1.9v.4l-2.6.5zm1.2 1.3c-.5 0-.9-.2-.9-.7s.4-.7.9-.8l1.4-.3v1.1c-.3.4-.8.7-1.4.7zm6-.3c0 1.1.7 1.9 1.8 1.9s1.8-.8 1.8-1.9V1.9h-1.1v3.3c0 .7-.3 1.1-.9 1.1-.5 0-.8-.4-.8-1.1V1.9H7.3v3.4zm7.3-1c-.6.2-.9.5-.9.9s.4.7.8.7c.6 0 .9-.3 1.1-.7V4.3l-1 .3zm1.1-2.4c-.8 0-1.5.4-1.8 1V1.9h-1.1V7h1.1V4.9c.3.5.9.8 1.6.8.9 0 1.7-.8 1.7-2.6.1-1.6-.7-2.6-1.5-2.6zm6-.3c-1.1 0-1.8.8-1.8 1.9s.7 1.9 1.8 1.9c1.1 0 1.8-.8 1.8-1.9S23.8 1.9 22.8 1.9zm0 3c-.6 0-.9-.5-.9-1.1s.3-1.1.9-1.1c.6 0 .9.5.9 1.1s-.3 1.1-.9 1.1z"/>
-        <path d="M.4 7.5c2.6 1 5.8 1.3 8.7 1.3 3.3 0 6.7-.4 9.6-1.5-.4-.3-.8-.7-1-1.1C15 7.1 11.8 7.5 8.7 7.5 5.8 7.5 3 7.1.6 6.3c-.1.2-.2.4-.2.7l-.2.5z" fill="#e8602e"/>
-      </svg>
-    )},
-    { name: "walmart", logo: (
-      <div className="flex items-center gap-1.5 group-hover:text-white transition-colors text-grey-500">
-        <span className="font-extrabold tracking-tight text-lg md:text-xl">Walmart</span>
-        <svg className="w-5 h-5 text-primary fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 0l1.7 4.5 4.7-1.7-1.7 4.7 4.5 1.7-4.5 1.7 1.7 4.7-4.7-1.7-1.7 4.5-1.7-4.5-4.7 1.7 1.7-4.7-4.5-1.7 4.5-1.7-1.7-4.7 4.7 1.7z" />
-        </svg>
-      </div>
-    )},
-    { name: "tcs", logo: (
-      <div className="flex flex-col items-start leading-none group-hover:text-white transition-colors text-grey-500 font-manrope">
-        <span className="font-black text-sm tracking-widest uppercase">tcs</span>
-        <span className="text-[7px] uppercase tracking-wider text-grey-600">tata consultancy</span>
-      </div>
-    )}
-  ];
-
   return (
-    <section className="py-16 px-6 bg-black relative border-t border-white/5">
-      <div className="max-w-6xl mx-auto">
-        {/* Main Grid Block */}
-        <div className="p-1 md:p-8 rounded-3xl bg-white/[0.01] border border-white/5 relative overflow-hidden shadow-2xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch p-6 md:p-4">
-            
-            {/* Left Column widgets */}
-            <div className="lg:col-span-7 flex flex-col justify-between gap-6">
-              {/* Top row with 2 small boxes */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {/* Stats 1: GitHub */}
-                <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-primary/20 flex flex-col justify-between min-h-[140px] transition-all duration-300">
-                  <div className="flex justify-between items-start">
-                    <h4 className="text-3xl font-extrabold font-machina text-white flex items-baseline">
-                      50K<span className="text-primary text-2xl font-normal">+</span>
-                    </h4>
-                    <svg className="w-5 h-5 text-primary opacity-80" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+    <section className="py-16 px-6 bg-black relative flex justify-center">
+      <div className="w-full max-w-6xl p-4 md:p-6 rounded-3xl bg-[#111111] border border-[#222222] shadow-2xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
+          
+          {/* Left Column */}
+          <div className="lg:col-span-6 flex flex-col gap-4">
+            {/* Top row with 2 small boxes */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 h-[220px]">
+              {/* Stats 1: GitHub */}
+              <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-[#222222] flex flex-col justify-between transition-all duration-300">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <svg className="w-7 h-7 text-[#e25822]" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                     </svg>
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-white uppercase tracking-wider mb-1">GitHub Commits</p>
-                    <p className="text-[11px] text-grey-500 leading-normal">Be part of clean, modular, and optimized repositories.</p>
-                  </div>
-                </div>
-
-                {/* Stats 2: Hackathon Winnings */}
-                <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-primary/20 flex flex-col justify-between min-h-[140px] transition-all duration-300">
-                  <div className="flex justify-between items-start">
-                    <h4 className="text-3xl font-extrabold font-machina text-white flex items-baseline">
-                      05<span className="text-primary text-2xl font-normal">+ Wins</span>
+                    <h4 className="text-2xl font-light text-[#e25822]">
+                      50K+
                     </h4>
-                    <Star className="w-5 h-5 text-primary opacity-80" />
                   </div>
-                  <div>
-                    <p className="text-xs font-bold text-white uppercase tracking-wider mb-1">Hackathon Titles</p>
-                    <p className="text-[11px] text-grey-500 leading-normal">Rapidly shipping technical products under strict deadlines.</p>
-                  </div>
+                  <p className="text-sm font-light text-white mt-2">GitHub Commits</p>
                 </div>
+                <p className="text-[13px] text-gray-400 font-light leading-snug">
+                  Be part of clean, modular, and optimized repositories.
+                </p>
               </div>
 
-              {/* Bottom larger box */}
-              <div className="p-7 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-primary/20 transition-all duration-300 flex flex-col justify-between">
+              {/* Stats 2: Hackathon Winnings */}
+              <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-[#222222] flex flex-col justify-between transition-all duration-300">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <Star className="w-7 h-7 text-[#e25822] fill-[#e25822]" />
+                    <h4 className="text-2xl font-light text-[#e25822]">
+                      05+ Wins
+                    </h4>
+                  </div>
+                  <p className="text-sm font-light text-white mt-2">Hackathon Titles</p>
+                </div>
+                <p className="text-[13px] text-gray-400 font-light leading-snug">
+                  Rapidly shipping technical products under strict deadlines.
+                </p>
+              </div>
+            </div>
+
+            {/* Bottom larger box */}
+            <div className="p-8 rounded-2xl bg-[#0a0a0a] border border-[#222222] flex flex-col justify-between flex-1 min-h-[260px]">
+              <div>
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="font-machina text-white text-2xl md:text-4xl font-black uppercase tracking-tight">
+                  <span className="text-white text-3xl md:text-4xl font-light uppercase tracking-wide">
                     LAUNCH
                   </span>
                   
                   {/* Overlapping small avatar images */}
-                  <div className="flex -space-x-2.5 overflow-hidden py-1">
+                  <div className="flex -space-x-2 overflow-hidden">
                     {[
-                      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&h=80&q=80",
-                      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80",
-                      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=80",
-                      "/veeresh-avatar.jpg"
+                      "https://randomuser.me/api/portraits/women/44.jpg",
+                      "https://randomuser.me/api/portraits/men/32.jpg",
+                      "https://randomuser.me/api/portraits/women/68.jpg",
+                      "https://randomuser.me/api/portraits/men/46.jpg"
                     ].map((src, index) => (
                       <img
                         key={index}
                         src={src}
                         alt="Profile avatar"
-                        className="w-8 h-8 rounded-full border-2 border-[#111115] object-cover inline-block"
+                        className="w-8 h-8 rounded-full border-2 border-[#0a0a0a] object-cover"
                       />
                     ))}
                   </div>
 
-                  <span className="font-machina text-white text-2xl md:text-4xl font-black uppercase tracking-tight">
+                  <span className="text-white text-3xl md:text-4xl font-light uppercase tracking-wide">
                     YOUR
                   </span>
                 </div>
 
                 {/* Arrow Pill Indicator */}
-                <a 
-                  href="#contact"
-                  className="w-16 h-8 rounded-full border border-primary/30 hover:border-primary flex items-center justify-center text-primary mt-4 hover:scale-105 transition-all duration-300"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-
-                <h3 className="font-machina text-2xl md:text-4xl font-black tracking-tight text-white leading-tight mt-6">
-                  MVP AND PRODUCT TO THE MARKET FAST!
-                </h3>
+                <div className="mt-4">
+                  <div className="w-16 h-7 rounded-full border border-white/20 flex items-center justify-end px-2 text-white/80">
+                    <ArrowRight className="w-4 h-4" />
+                  </div>
+                </div>
               </div>
-            </div>
 
-            {/* Right Column tall video player card */}
-            <div className="lg:col-span-5 relative rounded-2xl border border-white/5 hover:border-primary/20 transition-all duration-300 bg-zinc-950 overflow-hidden min-h-[360px]">
-              <div className="absolute inset-0 w-full h-full overflow-hidden rounded-2xl pointer-events-none">
-                <iframe
-                  className="absolute inset-0 w-full h-full border-0 scale-[1.35] origin-center"
-                  src="https://www.youtube.com/embed/S2T7Bm17Bng?autoplay=1&mute=1&loop=1&playlist=S2T7Bm17Bng&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-                  title="Sheryians Campaign Video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-              {/* Invisible overlay to strictly block clicks in all browsers */}
-              <div className="absolute inset-0 w-full h-full z-10 bg-transparent"></div>
+              <h3 className="text-3xl md:text-4xl font-light tracking-wide text-white leading-tight mt-6 uppercase">
+                MVP AND PRODUCT<br />TO THE MARKET FAST!
+              </h3>
             </div>
-
           </div>
-        </div>
 
+          {/* Right Column tall video player card */}
+          <div className="lg:col-span-6 relative rounded-2xl border border-[#222222] bg-[#0a0a0a] overflow-hidden min-h-[496px]">
+            {/* Background Video */}
+            <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none opacity-30">
+              <iframe
+                className="absolute inset-0 w-full h-full border-0 scale-[1.35] origin-center grayscale brightness-75 sepia-[0.3] hue-rotate-[-30deg]"
+                src="https://www.youtube.com/embed/S2T7Bm17Bng?autoplay=1&mute=1&loop=1&playlist=S2T7Bm17Bng&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+                title="Campaign Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            
+            <div className="absolute inset-0 w-full h-full z-10 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-[#0a0a0a]/80 pointer-events-none"></div>
+
+            {/* Content overlay */}
+            <div className="relative z-20 h-full flex flex-col justify-between p-8">
+              {/* Top Text */}
+              <div className="flex justify-between items-start gap-4">
+                <h2 className="text-4xl font-light text-white leading-tight">
+                  Start<br />Building
+                </h2>
+                <p className="text-[#c73b22] text-sm max-w-[220px] text-right mt-2 leading-relaxed">
+                  A movement shaping India's next coders
+                </p>
+              </div>
+
+              {/* Huge Background Text */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none mix-blend-color-dodge">
+                <span className="text-[130px] font-black tracking-tighter text-[#8a2a16]/40 select-none scale-y-[1.6] inline-block">
+                  VEERESH
+                </span>
+              </div>
+
+              {/* Bottom Content */}
+              <div className="flex flex-col gap-8 relative z-30">
+                {/* Tags scattered */}
+                <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center md:justify-start max-w-sm mx-auto md:mx-0">
+                  {['Web Development', 'Data Structures and Algorithms', 'Programming', 'Placements', 'Design ui/ux'].map(tag => (
+                    <span key={tag} className="text-[#a1a1a1]/80 text-[11px] font-light tracking-wide">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Button */}
+                <div className="self-center md:self-start">
+                  <a href="#contact" className="inline-flex items-center gap-2 px-6 py-2.5 border border-[#333] rounded-xl text-[#e25822] text-sm font-normal hover:bg-[#e25822]/10 transition-colors">
+                    Get in touch <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   );
