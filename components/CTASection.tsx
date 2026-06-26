@@ -94,9 +94,9 @@ export default function CTASection() {
           {/* Right Column tall video player card */}
           <div className="lg:col-span-6 relative rounded-2xl border border-[#222222] bg-[#0a0a0a] overflow-hidden min-h-[496px]">
             {/* Background Video */}
-            <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none opacity-30">
+            <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none opacity-80">
               <iframe
-                className="absolute inset-0 w-full h-full border-0 scale-[1.35] origin-center grayscale brightness-75 sepia-[0.3] hue-rotate-[-30deg]"
+                className="absolute inset-0 w-full h-full border-0 scale-[1.35] origin-center"
                 src="https://www.youtube.com/embed/S2T7Bm17Bng?autoplay=1&mute=1&loop=1&playlist=S2T7Bm17Bng&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
                 title="Campaign Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -104,46 +104,8 @@ export default function CTASection() {
               />
             </div>
             
-            <div className="absolute inset-0 w-full h-full z-10 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-[#0a0a0a]/80 pointer-events-none"></div>
-
-            {/* Content overlay */}
-            <div className="relative z-20 h-full flex flex-col justify-between p-8">
-              {/* Top Text */}
-              <div className="flex justify-between items-start gap-4">
-                <h2 className="text-4xl font-light text-white leading-tight">
-                  Start<br />Building
-                </h2>
-                <p className="text-[#c73b22] text-sm max-w-[220px] text-right mt-2 leading-relaxed">
-                  A movement shaping India's next coders
-                </p>
-              </div>
-
-              {/* Huge Background Text */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none mix-blend-color-dodge">
-                <span className="text-[130px] font-black tracking-tighter text-[#8a2a16]/40 select-none scale-y-[1.6] inline-block">
-                  VEERESH
-                </span>
-              </div>
-
-              {/* Bottom Content */}
-              <div className="flex flex-col gap-8 relative z-30">
-                {/* Tags scattered */}
-                <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center md:justify-start max-w-sm mx-auto md:mx-0">
-                  {['Web Development', 'Data Structures and Algorithms', 'Programming', 'Placements', 'Design ui/ux'].map(tag => (
-                    <span key={tag} className="text-[#a1a1a1]/80 text-[11px] font-light tracking-wide">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Button */}
-                <div className="self-center md:self-start">
-                  <a href="#contact" className="inline-flex items-center gap-2 px-6 py-2.5 border border-[#333] rounded-xl text-[#e25822] text-sm font-normal hover:bg-[#e25822]/10 transition-colors">
-                    Get in touch <ArrowRight className="w-4 h-4" />
-                  </a>
-                </div>
-              </div>
-            </div>
+            {/* Subtle gradient so it doesn't look too harsh against the black background */}
+            <div className="absolute inset-0 w-full h-full z-10 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent pointer-events-none"></div>
           </div>
 
         </div>
