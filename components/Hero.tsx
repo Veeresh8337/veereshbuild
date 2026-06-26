@@ -28,7 +28,14 @@ export default function Hero() {
         {/* Main Headline */}
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-normal text-white font-sans leading-[1.2] w-full tracking-tight">
           Become The Software Engineer<br />
-          That <span className="inline-block border border-[#e25822]/40 bg-[#e25822]/5 px-3 py-0.5 md:py-1 mx-1 md:mx-2 text-white">Companies</span> Want To Hire!
+          That <span className="inline-block relative border border-[#e25822]/60 bg-[#e25822]/10 px-3 py-0.5 md:py-1 mx-1 md:mx-2 text-white">
+            Companies
+            {/* Corner accents */}
+            <span className="absolute -top-[2.5px] -left-[2.5px] w-[5px] h-[5px] bg-white border border-[#e25822]/60"></span>
+            <span className="absolute -top-[2.5px] -right-[2.5px] w-[5px] h-[5px] bg-white border border-[#e25822]/60"></span>
+            <span className="absolute -bottom-[2.5px] -left-[2.5px] w-[5px] h-[5px] bg-white border border-[#e25822]/60"></span>
+            <span className="absolute -bottom-[2.5px] -right-[2.5px] w-[5px] h-[5px] bg-white border border-[#e25822]/60"></span>
+          </span> Want To Hire!
         </h1>
 
         {/* Sub-headline */}

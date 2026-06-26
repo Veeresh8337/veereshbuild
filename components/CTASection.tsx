@@ -118,13 +118,17 @@ export default function CTASection() {
 
             {/* Right Column tall video player card */}
             <div className="lg:col-span-5 relative rounded-2xl border border-white/5 hover:border-primary/20 transition-all duration-300 bg-zinc-950 overflow-hidden min-h-[360px]">
-              <iframe
-                className="absolute inset-0 w-full h-full border-0 rounded-2xl"
-                src="https://www.youtube.com/embed/S2T7Bm17Bng?autoplay=1&mute=1&loop=1&playlist=S2T7Bm17Bng"
-                title="Sheryians Campaign Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+              <div className="absolute inset-0 w-full h-full overflow-hidden rounded-2xl pointer-events-none">
+                <iframe
+                  className="absolute inset-0 w-full h-full border-0 scale-[1.35] origin-center"
+                  src="https://www.youtube.com/embed/S2T7Bm17Bng?autoplay=1&mute=1&loop=1&playlist=S2T7Bm17Bng&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+                  title="Sheryians Campaign Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              {/* Invisible overlay to strictly block clicks in all browsers */}
+              <div className="absolute inset-0 w-full h-full z-10 bg-transparent"></div>
             </div>
 
           </div>
