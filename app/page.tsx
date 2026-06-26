@@ -1,6 +1,7 @@
 import Preloader from "../components/Preloader";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import SkillsMarquee from "../components/SkillsMarquee";
 import Stats from "../components/Stats";
 import CTASection from "../components/CTASection";
 import Cohorts from "../components/Cohorts";
@@ -25,6 +26,9 @@ export default function Home() {
       <main className="flex-1 w-full bg-black">
         {/* 2. Hero Header Section */}
         <Hero />
+
+        {/* Moving Skills Marquee */}
+        <SkillsMarquee />
 
         {/* 3. Social Proof Statistics */}
         <Stats />
