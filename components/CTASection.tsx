@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Star, Youtube } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 
 export default function CTASection() {
   return (
