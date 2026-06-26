@@ -1,26 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Caveat+Brush&family=Space+Grotesk:wght@500;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
+  
+  --color-primary: #e8602e;
+  --color-primary-hover: #c95326;
+  --color-primary-glow: rgba(232, 96, 46, 0.15);
+  
+  --color-grey-100: #f5f5f5;
+  --color-grey-400: #979797;
+  --color-grey-500: #6b7280;
+  --color-grey-800: #1f2937;
+  --color-grey-900: #111827;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-primary-glow: var(--color-primary-glow);
+  --color-bg-dark: #0c0c0e;
+  --font-manrope: "Manrope", sans-serif;
+  --font-machina: "Space Grotesk", sans-serif;
+  --font-caveat: "Caveat Brush", cursive;
+  
+  --color-grey-100: var(--color-grey-100);
+  --color-grey-400: var(--color-grey-400);
+  --color-grey-500: var(--color-grey-500);
+  --color-grey-800: var(--color-grey-800);
+  --color-grey-900: var(--color-grey-900);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: var(--font-manrope);
+  overflow-x: hidden;
+}
+
+/* Keyframes and Animations */
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+@keyframes bounce-custom {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-4px);
+    opacity: 0.7;
+  }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.animate-bounce-dot {
+  animation: bounce-custom 0.5s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e8602e;
 }
