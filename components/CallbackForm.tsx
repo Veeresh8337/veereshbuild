@@ -65,7 +65,7 @@ export default function CallbackForm() {
                 </div>
                 <div>
                   <p className="text-[10px] text-grey-500 font-bold uppercase tracking-wider">Direct WhatsApp</p>
-                  <p className="font-semibold text-white">+91 91091 58249</p>
+                  <p className="font-semibold text-white">+91 74834 60029</p>
                 </div>
               </div>
 
@@ -75,7 +75,7 @@ export default function CallbackForm() {
                 </div>
                 <div>
                   <p className="text-[10px] text-grey-500 font-bold uppercase tracking-wider">Email Inquiry</p>
-                  <p className="font-semibold text-white">hello@veeresh.dev</p>
+                  <p className="font-semibold text-white">veereshhindiholi8337@gmail.com</p>
                 </div>
               </div>
 

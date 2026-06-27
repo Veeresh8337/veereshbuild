@@ -42,7 +42,7 @@ export default function About() {
           {/* Avatar Container */}
           <div className="lg:col-span-4 relative aspect-square max-w-[320px] mx-auto lg:mx-0 rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
             <img
-              src="/veeresh-avatar.jpg"
+              src="/veeresh-avatar.png"
               alt="Veeresh Hindiholi"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
             />

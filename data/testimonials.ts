@@ -18,7 +18,7 @@ export const testimonials: Achievement[] = [
     location: "Jain Engineering College, Belgavi",
     event: "Odyssey National Level Fest",
     description: "Won 1st Prize in the Hackathon category at the Odyssey National Level Event, competing against 50+ regional engineering teams.",
-    imageUrl: "/odyssey-winner.jpg",
+    imageUrl: "/odyssey-winner.png",
     badge: "Winner",
     tags: ["Hackathon", "JCE", "National Level"]
   },
@@ -29,7 +29,7 @@ export const testimonials: Achievement[] = [
     location: "JAIN BCA Belagavi",
     event: "Parousia 2K25 Fest",
     description: "Won the General Championship 🏆 along with a ₹20,000 cash prize at the 2-Day National Level Tech Fest.",
-    imageUrl: "/parousia-gc.jpg",
+    imageUrl: "/parousia-gc.png",
     badge: "General Championship",
     tags: ["Champions", "Teamwork", "JGI"]
   },
@@ -40,7 +40,7 @@ export const testimonials: Achievement[] = [
     location: "Belagavi, India",
     event: "SGBIT Hackathon",
     description: "Secured 1st Prize at the Hackathon hosted at SGBIT Belagavi backed by IIT and Start-up Karnataka.",
-    imageUrl: "/sgbit-winner.jpg",
+    imageUrl: "/sgbit-winner.png",
     badge: "Winner",
     tags: ["Hackathon", "Startup Karnataka", "SGBIT"]
   },
@@ -51,7 +51,7 @@ export const testimonials: Achievement[] = [
     location: "Chikkamagaluru, India",
     event: "TechXhibit Hackathon",
     description: "Secured 1st Place at the National Level Project Expo (TechXhibit) organized by Adichunchanagiri Institute of Technology.",
-    imageUrl: "/aignite-winner.jpg",
+    imageUrl: "/aignite-winner.png",
     badge: "Winner",
     tags: ["Project Expo", "Innovation", "AIT"]
   },
@@ -62,7 +62,7 @@ export const testimonials: Achievement[] = [
     location: "Bangalore, India",
     event: "ANVESHAN Hackathon",
     description: "Secured Runner-Up status at the prestigious ANVESHAN Hackathon organized by IEEE Bangalore Section. A journey worth celebrating!",
-    imageUrl: "/anveshan-winner.jpg",
+    imageUrl: "/anveshan-winner.png",
     badge: "Runner-Up",
     tags: ["Hackathon", "Innovation", "IEEE"]
   }
