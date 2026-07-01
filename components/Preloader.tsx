@@ -27,7 +27,7 @@ export default function Preloader() {
     };
   }, []);
 
-  if (!mounted || !visible) return null;
+  if (!mounted) return null;
 
   return (
     <div
@@ -35,6 +35,7 @@ export default function Preloader() {
       style={{
         opacity: visible ? 1 : 0,
         visibility: visible ? "visible" : "hidden",
+        pointerEvents: visible ? "auto" : "none",
       }}
     >
       {/* Subtle Glowing Background */}

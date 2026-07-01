@@ -8,7 +8,7 @@ import Cohorts from "../components/Cohorts";
 import Comparison from "../components/Comparison";
 import Curriculum from "../components/Curriculum";
 import About from "../components/About";
-import EventsSection from "../components/EventsSection";
+import HowWeBuild from "../components/HowWeBuild";
 import Testimonials from "../components/Testimonials";
 import CallbackForm from "../components/CallbackForm";
 import Footer from "../components/Footer";
@@ -48,8 +48,8 @@ export default function Home() {
         {/* 6.5 Biography & Trait Highlights */}
         <About />
 
-        {/* 6.7 Horizontal Scrolling Events Section */}
-        <EventsSection />
+        {/* 6.6 How We Build Products */}
+        <HowWeBuild />
 
         {/* 7. Winnings & Achievements Slider */}
         <Testimonials />
