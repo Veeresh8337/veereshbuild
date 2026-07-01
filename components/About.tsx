@@ -42,7 +42,7 @@ export default function About() {
           {/* Avatar Container */}
           <div className="lg:col-span-4 relative aspect-square max-w-[320px] mx-auto lg:mx-0 rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
             <img
-              src="/veeresh-avatar.png"
+              src="/veeresh-avatar.jpg"
               alt="Veeresh Hindiholi"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
             />
@@ -61,13 +61,13 @@ export default function About() {
                 Most developers wait for instructions. I actively look for business problems to solve.
               </p>
               <p>
-                My philosophy is simple: <strong className="text-white">Software is useless if it doesn't serve the business.</strong> Whether I’m building a SaaS dashboard for a fintech startup or a native mobile app for commerce, my goal is always the same—ship fast, scale easily, and drive results.
+                My philosophy is simple: <strong className="text-white">Software is useless if it doesn&apos;t serve the business.</strong> Whether I’m building a SaaS dashboard for a fintech startup or a native mobile app for commerce, my goal is always the same—ship fast, scale easily, and drive results.
               </p>
               <p>
-                I specialize in the MERN stack (React, Node.js) and React Native, but my real competitive advantage is speed. In a world where speed is currency, I help founders and agencies move from "Idea" to "Deployed" in weeks, not months.
+                I specialize in the MERN stack (React, Node.js) and React Native, but my real competitive advantage is speed. In a world where speed is currency, I help founders and agencies move from &quot;Idea&quot; to &quot;Deployed&quot; in weeks, not months.
               </p>
               <p className="text-white font-semibold pt-2">
-                If you want a developer who just clears Jira tickets, I’m not your guy. But if you want a technical partner who cares about your product's success as much as you do, let’s build.
+                If you want a developer who just clears Jira tickets, I’m not your guy. But if you want a technical partner who cares about your product&apos;s success as much as you do, let’s build.
               </p>
             </div>
           </div>

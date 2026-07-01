@@ -139,7 +139,7 @@ export default function EventsSection() {
 
         {/* Horizontal scroll timeline wrapper */}
         <div ref={scrollRef} className="flex gap-8 px-16 w-max items-start pt-8 pb-24">
-          {eventItems.map((event, index) => (
+          {eventItems.map((event) => (
             <div
               key={event.id}
               className="event-card w-[290px] sm:w-[320px] md:w-[380px] h-[430px] md:h-[510px] rounded-[2rem] overflow-hidden relative group cursor-pointer border border-white/5 shadow-2xl flex-shrink-0"

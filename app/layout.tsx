@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sheryians Coding School | Upgrading India's Coding Mindset",
-  description: "Learn coding from scratch and build real-world products. Join our community of over 1 Million learners.",
+  title: "VEERESH BUILd",
+  description: "WEB AND APP DEVELOPER"
 };
 
 export default function RootLayout({

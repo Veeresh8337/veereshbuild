@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { ArrowUpRight } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function ProjectsPage() {
   const router = useRouter();
@@ -229,7 +230,7 @@ export default function ProjectsPage() {
             {/* Badge */}
             <span className="px-4 py-1.5 rounded-full border border-white/30 text-white text-[10px] font-bold uppercase tracking-[0.2em] bg-white/10 backdrop-blur z-10 flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#ccff00] animate-pulse" />
-              LET'S COLLABORATE
+              LET&apos;S COLLABORATE
             </span>
 
             {/* Title */}
@@ -244,18 +245,18 @@ export default function ProjectsPage() {
 
             {/* Action buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-6 z-10">
-              <a
+              <Link
                 href="/#contact"
                 className="px-8 py-4 bg-[#ccff00] text-black font-bold text-xs uppercase tracking-wider rounded-full hover:scale-105 transition-transform duration-300 flex items-center gap-2 shadow-lg shadow-black/10"
               >
                 START A PROJECT <span className="text-lg leading-none">→</span>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/#services"
                 className="px-8 py-4 bg-transparent border border-white/20 hover:border-white text-white font-bold text-xs uppercase tracking-wider rounded-full hover:bg-white/5 transition-colors flex items-center gap-2"
               >
                 VIEW SERVICES <span className="text-lg leading-none">↗</span>
-              </a>
+              </Link>
             </div>
 
             {/* Rotating Infinite Marquee (Bottom of Card) */}

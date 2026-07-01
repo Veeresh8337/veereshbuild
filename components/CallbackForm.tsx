@@ -49,12 +49,12 @@ export default function CallbackForm() {
           
           {/* Text Information Column */}
           <div className="lg:col-span-6 flex flex-col gap-6">
-            <span className="text-xs uppercase tracking-[0.2em] font-extrabold text-primary">Let's Collaborate</span>
+            <span className="text-xs uppercase tracking-[0.2em] font-extrabold text-primary">Let&apos;s Collaborate</span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-machina tracking-tight text-white leading-tight">
               Ready To Ship Your <span className="text-primary">MVP?</span>
             </h2>
             <p className="text-grey-400 font-manrope text-base md:text-lg leading-relaxed max-w-md">
-              Let's build a high-performance web app, mobile app, or AI customer service agent together. Fill in your project scoping details for a strategy call.
+              Let&apos;s build a high-performance web app, mobile app, or AI customer service agent together. Fill in your project scoping details for a strategy call.
             </p>
 
             {/* Direct Contacts List */}

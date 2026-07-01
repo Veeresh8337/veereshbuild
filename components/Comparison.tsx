@@ -46,10 +46,10 @@ export default function Comparison() {
                 <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/40" />
                 <div className="w-2.5 h-2.5 rounded-full bg-green-500/40" />
               </div>
-              <p className="text-primary font-semibold mb-1">// The Partner Mindset</p>
+              <p className="text-primary font-semibold mb-1">{"// The Partner Mindset"}</p>
               <p className="text-white"><span className="text-blue-400">const</span> partner = <span className="text-blue-400">new</span> <span className="text-yellow-400">Veeresh</span>();</p>
               <p className="text-white">partner.<span className="text-green-400">shipMVP</span>().<span className="text-green-400">optimizeRevenue</span>();</p>
-              <p className="text-grey-500 mt-2">// output: High velocity success 🚀</p>
+              <p className="text-grey-500 mt-2">{"// output: High velocity success 🚀"}</p>
             </div>
           </div>
 
