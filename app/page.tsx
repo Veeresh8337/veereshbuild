@@ -9,7 +9,9 @@ import Comparison from "../components/Comparison";
 import Curriculum from "../components/Curriculum";
 import About from "../components/About";
 import HowWeBuild from "../components/HowWeBuild";
+import EngagementOptions from "../components/EngagementOptions";
 import Testimonials from "../components/Testimonials";
+import ClientTestimonials from "../components/ClientTestimonials";
 import CallbackForm from "../components/CallbackForm";
 import Footer from "../components/Footer";
 
@@ -30,7 +32,7 @@ export default function Home() {
         {/* Moving Skills Marquee */}
         <SkillsMarquee />
 
-        {/* 3. Social Proof Statistics */}
+        {/* 3. Social Proof Statistics (credible metrics only) */}
         <Stats />
 
         {/* 3.5 Featured Call-to-Action Dashboard Widget */}
@@ -51,10 +53,16 @@ export default function Home() {
         {/* 6.6 How We Build Products */}
         <HowWeBuild />
 
+        {/* 6.7 Engagement Options / Pricing Tiers */}
+        <EngagementOptions />
+
         {/* 7. Winnings & Achievements Slider */}
         <Testimonials />
 
-        {/* 8. Counselor Callback Guidance Form */}
+        {/* 7.5 Client Testimonials */}
+        <ClientTestimonials />
+
+        {/* 8. Project Inquiry Form */}
         <CallbackForm />
       </main>
 

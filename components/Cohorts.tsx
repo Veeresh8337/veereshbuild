@@ -1,10 +1,15 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { ArrowRight, Clock, Code, Send } from "lucide-react";
+import { ArrowRight, Clock, Code, Send, TrendingUp } from "lucide-react";
+import { projectResults } from "../data/content";
 
 export default function Cohorts() {
   const router = useRouter();
+
+  // Helper to look up result string by project id
+  const getResult = (id: string) =>
+    projectResults.find((r) => r.id === id)?.result ?? "";
 
   const projectsData = [
     {
@@ -129,7 +134,7 @@ export default function Cohorts() {
             PROJECTS
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-black max-w-4xl leading-tight">
-            Selected MVPs & High-Performance Builds Deployed for Startups.
+            Selected MVPs &amp; High-Performance Builds Deployed for Startups.
           </h2>
           <a
             href="#contact"
@@ -162,7 +167,7 @@ export default function Cohorts() {
                 </p>
 
                 {/* Info Pills */}
-                <div className="flex flex-wrap gap-4 mb-8">
+                <div className="flex flex-wrap gap-4 mb-6">
                   <div className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl font-semibold text-sm ${project.pillBg} ${project.pillText}`}>
                     {project.duration === "Currently Building" ? (
                       <span className="relative flex h-2 w-2 mr-1">
@@ -177,6 +182,27 @@ export default function Cohorts() {
                   <div className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl font-semibold text-sm ${project.pillBg} ${project.pillText}`}>
                     <Code className="w-4 h-4" />
                     <span>{project.tech}</span>
+                  </div>
+                </div>
+
+                {/* IMPACT / RESULT — shown above Tech Stack */}
+                <div className={`flex items-start gap-3 mb-6 px-4 py-3 rounded-xl border ${
+                  project.textColor === 'text-black'
+                    ? 'border-[#e25822]/25 bg-[#e25822]/5'
+                    : 'border-white/10 bg-white/5'
+                }`}>
+                  <TrendingUp className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
+                    project.textColor === 'text-black' ? 'text-[#e25822]' : 'text-[#e25822]'
+                  }`} />
+                  <div>
+                    <p className={`text-[10px] font-bold uppercase tracking-widest mb-1 ${
+                      project.textColor === 'text-black' ? 'text-[#e25822]' : 'text-[#e25822]'
+                    }`}>Impact</p>
+                    <p className={`text-sm font-medium leading-snug ${
+                      project.textColor === 'text-black' ? 'text-black/70' : 'text-white/70'
+                    }`}>
+                      {getResult(project.id)}
+                    </p>
                   </div>
                 </div>
 

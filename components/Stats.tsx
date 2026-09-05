@@ -1,9 +1,8 @@
 export default function Stats() {
   const statItems = [
     { value: "15", suffix: "+", label: "MVPs Shipped" },
-    { value: "5", suffix: "+", label: "Hackathon Winnings" },
+    { value: "5", suffix: "+", label: "Hackathon Wins" },
     { value: "100", suffix: "%", label: "On-Time Delivery" },
-    { value: "500K", suffix: "+", label: "Lines of Code" },
   ];
 
   return (
@@ -12,7 +11,7 @@ export default function Stats() {
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[100px] pointer-events-none" />
       
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6">
           {statItems.map((item, index) => (
             <div
               key={index}

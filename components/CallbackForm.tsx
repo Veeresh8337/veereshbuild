@@ -1,18 +1,52 @@
 "use client";
 
-import React, { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle2 } from "lucide-react";
+import React, { useState, useEffect, useRef } from "react";
+import { Mail, Phone, MapPin, Send, CheckCircle2, Tag } from "lucide-react";
+import { pricingTiers } from "../data/content";
+
+// Map tier slug to human-readable label for the badge
+const TIER_LABELS: Record<string, string> = Object.fromEntries(
+  pricingTiers.map((t) => [t.slug, t.label])
+);
 
 export default function CallbackForm() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    status: "saas",
-    course: "medium", // Mapping status -> projectType, course -> budget
+    whoAreYou: "founder",   // NEW: "Which best describes you?"
+    status: "saas",          // Project Type
+    course: "medium",        // Budget Range
+    pricingTier: "",         // Hidden — pre-populated from EngagementOptions CTA
   });
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+
+  // Ref to track mount status — prevents state updates on unmounted component
+  // (guards against React StrictMode double-invoke and async race conditions)
+  const mountedRef = useRef(false);
+
+  // Pick up the tier from sessionStorage or the custom event fired by EngagementOptions
+  useEffect(() => {
+    mountedRef.current = true;
+
+    const stored = sessionStorage.getItem("selectedTier");
+    if (stored && mountedRef.current) {
+      setFormData((prev) => ({ ...prev, pricingTier: stored }));
+    }
+
+    const handleTierEvent = (e: Event) => {
+      if (!mountedRef.current) return;
+      const detail = (e as CustomEvent).detail;
+      setFormData((prev) => ({ ...prev, pricingTier: detail.tier }));
+    };
+
+    window.addEventListener("tierSelected", handleTierEvent);
+    return () => {
+      mountedRef.current = false;
+      window.removeEventListener("tierSelected", handleTierEvent);
+    };
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -34,9 +68,11 @@ export default function CallbackForm() {
     setLoading(true);
     // Simulate API request
     setTimeout(() => {
+      if (!mountedRef.current) return; // component may have unmounted during the delay
       setLoading(false);
       setSubmitted(true);
-      setFormData({ name: "", phone: "", status: "saas", course: "medium" });
+      setFormData({ name: "", phone: "", whoAreYou: "founder", status: "saas", course: "medium", pricingTier: "" });
+      sessionStorage.removeItem("selectedTier");
     }, 1200);
   };
 
@@ -118,6 +154,28 @@ export default function CallbackForm() {
                     Inquire About A Project Build
                   </h3>
 
+                  {/* Pricing tier badge — shown when visitor clicks from EngagementOptions */}
+                  {formData.pricingTier && TIER_LABELS[formData.pricingTier] && (
+                    <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-primary/10 border border-primary/20 text-xs">
+                      <Tag className="w-3.5 h-3.5 text-primary" />
+                      <span className="text-primary font-semibold">
+                        Enquiring about:{" "}
+                        <span className="text-white">{TIER_LABELS[formData.pricingTier]}</span>
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => setFormData((p) => ({ ...p, pricingTier: "" }))}
+                        className="ml-auto text-grey-500 hover:text-white transition-colors"
+                        aria-label="Clear tier"
+                      >
+                        ×
+                      </button>
+                    </div>
+                  )}
+
+                  {/* Hidden tier field for form submission */}
+                  <input type="hidden" name="pricingTier" value={formData.pricingTier} />
+
                   {error && (
                     <div className="p-3 bg-red-500/10 border border-red-500/20 text-red-500 rounded-lg text-xs font-medium">
                       {error}
@@ -157,7 +215,26 @@ export default function CallbackForm() {
                     />
                   </div>
 
-                  {/* Double Row for Options */}
+                  {/* NEW: Who are you? */}
+                  <div className="flex flex-col gap-1.5">
+                    <label htmlFor="whoAreYou" className="text-[10px] uppercase font-bold tracking-wider text-grey-400">
+                      Which Best Describes You?
+                    </label>
+                    <select
+                      id="whoAreYou"
+                      name="whoAreYou"
+                      value={formData.whoAreYou}
+                      onChange={handleChange}
+                      className="px-4 py-3 rounded-xl bg-grey-900 border border-white/10 text-white text-sm focus:border-primary focus:outline-none transition-all cursor-pointer"
+                    >
+                      <option value="founder">Founder / Startup</option>
+                      <option value="agency">Agency Needing a Subcontractor</option>
+                      <option value="enterprise">Enterprise / Corporate</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  {/* Double Row for Project Type + Budget Range */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="flex flex-col gap-1.5">
                       <label htmlFor="status" className="text-[10px] uppercase font-bold tracking-wider text-grey-400">

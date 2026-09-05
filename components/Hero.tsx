@@ -2,6 +2,27 @@
 
 import { ArrowRight } from "lucide-react";
 
+// =============================================================================
+// HEADLINE VARIANTS — Choose one by setting it as the active <h1> below.
+// =============================================================================
+//
+// VARIANT A (Active) — Outcome / Client Language:
+//   "Your Idea. Live & Earning. In 21 Days."
+//   Sub: "We ship revenue-ready MVPs at startup speed — no 6-month agency timelines,
+//         no inflated teams. Just focused builds that reach your first users fast."
+//
+// VARIANT B — Bold / Direct:
+//   "We Ship Revenue-Ready MVPs. In 3 Weeks, Not 3 Months."
+//   Sub: "Most agencies take 6 months to deliver what we ship in weeks — with
+//         cleaner architecture and outcomes that actually move your KPIs."
+//
+// VARIANT C — AI-Velocity Angle:
+//   "AI-Accelerated Builds. 4× the Speed of Traditional Agencies."
+//   Sub: "We combine AI-assisted engineering with battle-tested architecture to
+//         cut time-to-launch — without cutting corners. 15+ MVPs proven it."
+//
+// =============================================================================
+
 export default function Hero() {
   return (
     <section
@@ -87,39 +108,38 @@ export default function Hero() {
       <div className="relative z-10 w-full flex flex-col items-center text-center gap-5 mt-10">
         {/* Top Text */}
         <div className="text-[#e25822] text-xs md:text-sm font-semibold tracking-[0.25em] uppercase">
-          SOFTWARE ENGINEER • FULL-STACK • AI
+          FULL-STACK DEVELOPMENT • AI INTEGRATION • RAPID MVP DELIVERY
         </div>
 
-        {/* Main Headline */}
+        {/* Main Headline — VARIANT A (Outcome / Client Language) */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white font-sans leading-[1.15] w-full tracking-tight">
-          Stop Searching.<br />
-          Start Building.<br />
-          I Turn <span className="inline-block relative border border-[#e25822]/60 bg-[#e25822]/10 px-3 py-0.5 md:py-1 mx-1 md:mx-2 text-white">
-            Ideas
+          Your Idea. Live &amp; Earning.<br />
+          In{" "}
+          <span className="inline-block relative border border-[#e25822]/60 bg-[#e25822]/10 px-3 py-0.5 md:py-1 mx-1 md:mx-2 text-white">
+            21 Days.
             {/* Corner accents */}
             <span className="absolute -top-[2.5px] -left-[2.5px] w-[5px] h-[5px] bg-white border border-[#e25822]/60"></span>
             <span className="absolute -top-[2.5px] -right-[2.5px] w-[5px] h-[5px] bg-white border border-[#e25822]/60"></span>
             <span className="absolute -bottom-[2.5px] -left-[2.5px] w-[5px] h-[5px] bg-white border border-[#e25822]/60"></span>
             <span className="absolute -bottom-[2.5px] -right-[2.5px] w-[5px] h-[5px] bg-white border border-[#e25822]/60"></span>
-          </span> Into Software.
+          </span>
         </h1>
 
         {/* Sub-headline */}
         <p className="text-[#a1a1aa] text-base md:text-lg font-light mt-2 max-w-2xl mx-auto leading-relaxed">
-          Building modern web applications, AI-powered solutions, and scalable backend systems with clean architecture and exceptional performance.
+          We ship revenue-ready MVPs at startup speed — no 6-month agency timelines,
+          no inflated teams. Just focused builds that reach your first users fast.
         </p>
 
-        {/* Avatar Group & Social Proof */}
+        {/* Credibility Line — replaces fake stock photo avatars */}
         <div className="flex items-center gap-3 mt-4">
-          <div className="flex -space-x-2">
-            <img className="w-8 h-8 rounded-full border border-black object-cover" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" />
-            <img className="w-8 h-8 rounded-full border border-black object-cover" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" />
-            <img className="w-8 h-8 rounded-full border border-black object-cover" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" />
-            <img className="w-8 h-8 rounded-full border border-black object-cover" src="https://randomuser.me/api/portraits/men/46.jpg" alt="Client" />
+          <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03]">
+            <span className="w-2 h-2 rounded-full bg-[#e25822] animate-pulse flex-shrink-0" />
+            <p className="text-xs md:text-sm text-[#a1a1aa] font-light">
+              <span className="text-[#e25822] font-semibold">15+ MVPs shipped.</span>
+              {" "}100% on-time delivery. 5× national hackathon wins.
+            </p>
           </div>
-          <p className="text-xs md:text-sm text-[#a1a1aa] font-light">
-            <span className="text-[#e25822] font-semibold">15+ MVPs</span> shipped for startup founders and companies
-          </p>
         </div>
 
         {/* Call to Actions (CTAs) */}
@@ -128,17 +148,18 @@ export default function Hero() {
             href="#contact"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#e25822] hover:bg-[#c94b1c] text-white text-sm md:text-base font-medium rounded-full transition-all duration-300 hover:scale-[1.03] shadow-lg shadow-[#e25822]/20"
           >
-            <span>Hire Me</span>
+            <span>Start Your Build</span>
             <ArrowRight className="w-4 h-4" />
           </a>
           <a
             href="#work"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-transparent border border-white/20 hover:border-white text-white text-sm md:text-base font-medium rounded-full transition-all duration-300 hover:bg-white/5"
           >
-            <span>View Projects</span>
+            <span>See Real Projects</span>
           </a>
         </div>
       </div>
     </section>
   );
 }
+
