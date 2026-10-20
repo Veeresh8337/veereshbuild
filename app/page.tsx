@@ -10,6 +10,7 @@ import Curriculum from "../components/Curriculum";
 import About from "../components/About";
 import HowWeBuild from "../components/HowWeBuild";
 import EngagementOptions from "../components/EngagementOptions";
+import WhyVeereshBuild from "../components/WhyVeereshBuild";
 import Testimonials from "../components/Testimonials";
 import ClientTestimonials from "../components/ClientTestimonials";
 import CallbackForm from "../components/CallbackForm";
@@ -55,6 +56,9 @@ export default function Home() {
 
         {/* 6.7 Engagement Options / Pricing Tiers */}
         <EngagementOptions />
+
+        {/* 6.8 Why VeereshBuild / Value Proposition */}
+        <WhyVeereshBuild />
 
         {/* 7. Winnings & Achievements Slider */}
         <Testimonials />

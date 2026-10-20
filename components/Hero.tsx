@@ -1,27 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
-
-// =============================================================================
-// HEADLINE VARIANTS — Choose one by setting it as the active <h1> below.
-// =============================================================================
-//
-// VARIANT A (Active) — Outcome / Client Language:
-//   "Your Idea. Live & Earning. In 21 Days."
-//   Sub: "We ship revenue-ready MVPs at startup speed — no 6-month agency timelines,
-//         no inflated teams. Just focused builds that reach your first users fast."
-//
-// VARIANT B — Bold / Direct:
-//   "We Ship Revenue-Ready MVPs. In 3 Weeks, Not 3 Months."
-//   Sub: "Most agencies take 6 months to deliver what we ship in weeks — with
-//         cleaner architecture and outcomes that actually move your KPIs."
-//
-// VARIANT C — AI-Velocity Angle:
-//   "AI-Accelerated Builds. 4× the Speed of Traditional Agencies."
-//   Sub: "We combine AI-assisted engineering with battle-tested architecture to
-//         cut time-to-launch — without cutting corners. 15+ MVPs proven it."
-//
-// =============================================================================
+import { ArrowRight, ChevronDown } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -106,60 +85,81 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 w-full flex flex-col items-center text-center gap-5 mt-10">
-        {/* Top Text */}
-        <div className="text-[#e25822] text-xs md:text-sm font-semibold tracking-[0.25em] uppercase">
-          FULL-STACK DEVELOPMENT • AI INTEGRATION • RAPID MVP DELIVERY
+
+        {/* Badge / Eyebrow */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#e25822]/30 bg-[#e25822]/8 backdrop-blur-sm">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#e25822] animate-pulse flex-shrink-0" />
+          <span className="text-[#e25822] text-xs md:text-sm font-bold tracking-[0.18em] uppercase">
+            Fixed Scopes&nbsp;•&nbsp;21-Day Sprints&nbsp;•&nbsp;Zero Fluff
+          </span>
         </div>
 
-        {/* Main Headline — VARIANT A (Outcome / Client Language) */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white font-sans leading-[1.15] w-full tracking-tight">
-          Your Idea. Live &amp; Earning.<br />
-          In{" "}
-          <span className="inline-block relative border border-[#e25822]/60 bg-[#e25822]/10 px-3 py-0.5 md:py-1 mx-1 md:mx-2 text-white">
-            21 Days.
-            {/* Corner accents */}
-            <span className="absolute -top-[2.5px] -left-[2.5px] w-[5px] h-[5px] bg-white border border-[#e25822]/60"></span>
-            <span className="absolute -top-[2.5px] -right-[2.5px] w-[5px] h-[5px] bg-white border border-[#e25822]/60"></span>
-            <span className="absolute -bottom-[2.5px] -left-[2.5px] w-[5px] h-[5px] bg-white border border-[#e25822]/60"></span>
-            <span className="absolute -bottom-[2.5px] -right-[2.5px] w-[5px] h-[5px] bg-white border border-[#e25822]/60"></span>
+        {/* Main Headline */}
+        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white max-w-5xl mx-auto leading-[1.12] text-center mb-6">
+          Stop Building Digital Brochures.{" "}
+          <br className="hidden sm:inline" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-300 to-orange-500 inline-block">
+            Ship Software That Generates Revenue.
           </span>
         </h1>
 
         {/* Sub-headline */}
         <p className="text-[#a1a1aa] text-base md:text-lg font-light mt-2 max-w-2xl mx-auto leading-relaxed">
-          We ship revenue-ready MVPs at startup speed — no 6-month agency timelines,
-          no inflated teams. Just focused builds that reach your first users fast.
+          We engineer full-stack web platforms, automated client portals, and revenue-ready MVPs in 21 days—no agency bloat, no static templates, just production-grade software.
         </p>
 
-        {/* Credibility Line — replaces fake stock photo avatars */}
-        <div className="flex items-center gap-3 mt-4">
-          <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03]">
-            <span className="w-2 h-2 rounded-full bg-[#e25822] animate-pulse flex-shrink-0" />
-            <p className="text-xs md:text-sm text-[#a1a1aa] font-light">
-              <span className="text-[#e25822] font-semibold">15+ MVPs shipped.</span>
-              {" "}100% on-time delivery. 5× national hackathon wins.
-            </p>
-          </div>
+        {/* Social Proof Pill */}
+        <div className="mt-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-800 text-xs sm:text-sm text-zinc-300 shadow-sm">
+          <span className="h-2 w-2 rounded-full bg-orange-500 animate-pulse flex-shrink-0" />
+          <span className="font-semibold text-orange-400">15+ MVPs shipped</span>
+          <span className="text-zinc-300">•</span>
+          <span className="text-zinc-300">100% on-time delivery</span>
+          <span className="text-zinc-300">•</span>
+          <span className="text-zinc-300">5× national hackathon wins</span>
         </div>
 
-        {/* Call to Actions (CTAs) */}
+        {/* Call to Actions */}
         <div className="mt-8 flex flex-col sm:flex-row gap-4 w-full justify-center sm:w-auto">
           <a
             href="#contact"
+            id="hero-cta-book-call"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#e25822] hover:bg-[#c94b1c] text-white text-sm md:text-base font-medium rounded-full transition-all duration-300 hover:scale-[1.03] shadow-lg shadow-[#e25822]/20"
           >
-            <span>Start Your Build</span>
+            <span>Book Architecture Call</span>
             <ArrowRight className="w-4 h-4" />
           </a>
           <a
-            href="#work"
+            href="#engagement"
+            id="hero-cta-sprints"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-transparent border border-white/20 hover:border-white text-white text-sm md:text-base font-medium rounded-full transition-all duration-300 hover:bg-white/5"
           >
-            <span>See Real Projects</span>
+            <ChevronDown className="w-4 h-4" />
+            <span>Explore 21-Day Sprints</span>
           </a>
+        </div>
+
+        {/* Tech Stack Strip */}
+        <div className="mt-12 flex flex-col items-center gap-3">
+          <p className="text-[#555] text-[10px] uppercase tracking-[0.2em] font-semibold">Powered by</p>
+          <div className="flex flex-wrap justify-center gap-2">
+            {[
+              "React / Next.js",
+              "FastAPI",
+              "Flutter",
+              "Supabase",
+              "Node.js",
+              "AI Integrations",
+            ].map((tech) => (
+              <span
+                key={tech}
+                className="px-3 py-1.5 rounded-full text-xs font-semibold text-[#a1a1aa] border border-white/10 bg-white/[0.03] hover:border-[#e25822]/40 hover:text-white transition-all duration-200 cursor-default"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 }
-

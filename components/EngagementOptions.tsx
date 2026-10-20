@@ -1,15 +1,15 @@
 "use client";
 
-import { ArrowRight, CheckCircle2, Clock, Users, Repeat } from "lucide-react";
+import { ArrowRight, CheckCircle2, Clock, LayoutDashboard, Bot } from "lucide-react";
 import { pricingTiers, PricingTier } from "../data/content";
 
 // Icon map is defined inside the component to avoid module-level JSX side-effects
 function TierCard({ tier }: { tier: PricingTier }) {
   // Define icons inside component so they render in proper React context
   const tierIcons: Record<string, React.ReactNode> = {
-    "launch-sprint": <Clock className="w-5 h-5" />,
-    "full-build": <Users className="w-5 h-5" />,
-    "ongoing-partner": <Repeat className="w-5 h-5" />,
+    "mvp-sprint": <Clock className="w-5 h-5" />,
+    "client-portals": <LayoutDashboard className="w-5 h-5" />,
+    "ai-automations": <Bot className="w-5 h-5" />,
   };
   const icon = tierIcons[tier.slug];
 
@@ -121,14 +121,13 @@ export default function EngagementOptions() {
         {/* Section header */}
         <div className="flex flex-col items-center text-center gap-4 mb-16">
           <span className="text-xs uppercase tracking-[0.2em] font-extrabold text-[#e25822]">
-            Engagement Options
+            Our Services
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold font-machina tracking-tight text-white max-w-3xl leading-tight">
-            How We <span className="text-[#e25822]">Work Together</span>
+            Three Ways We Ship <span className="text-[#e25822]">Production Software</span>
           </h2>
           <p className="text-[#a1a1aa] font-manrope text-base md:text-lg max-w-xl leading-relaxed">
-            Three ways to engage — from a focused sprint to a long-term technical
-            partnership. Pick what fits your stage.
+            Fixed-scope engagements, clear timelines, and no agency overhead — pick the model that fits your workflow.
           </p>
         </div>
 
